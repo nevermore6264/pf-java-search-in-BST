@@ -24,4 +24,20 @@ public class SearchInBST {
         return search(root.right, key);
     }
 
+    public void postOrderTraversal(Node root) {
+        if (root != null) {
+            postOrderTraversal(root.left);
+            postOrderTraversal(root.right);
+            System.out.printf("%d ", root.key);
+        }
+    }
+
+    public void preOrderTraversal(Node root) {
+        if (root != null) {
+            System.out.printf("%d ", root.key);
+            preOrderTraversal(root.left);
+            preOrderTraversal(root.right);
+        }
+    }
+
 }
